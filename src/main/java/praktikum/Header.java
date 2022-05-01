@@ -12,7 +12,7 @@ public class Header {
     private SelenideElement personalAccountButton;
     @FindBy(how = How.XPATH, using = ".//p[text()='Конструктор']")
     private SelenideElement constructorButton;
-    @FindBy(how = How.XPATH, using = ".//*[@id='root']/div/header/nav/div/a")
+    @FindBy(how = How.XPATH, using = "html/body/div/div/header/nav/div/a")
     private SelenideElement stellarBurgerLogo;
 
     @Step("Click personal account button")
