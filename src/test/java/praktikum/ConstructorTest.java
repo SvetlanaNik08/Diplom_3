@@ -1,5 +1,6 @@
 package praktikum;
 
+import com.codeborne.selenide.Configuration;
 import org.junit.Test;
 
 import static com.codeborne.selenide.Selenide.open;
@@ -12,6 +13,7 @@ public class ConstructorTest {
 
     @Test
     @DisplayName("After click buns_link - unit 'Buns' is visible")
+
     public void testGoToBunsUnitAfterClickBunsLink() {
         Header header = open(Header.URL, Header.class);
         MainPage mainPage = page(MainPage.class);

@@ -86,5 +86,4 @@ public class LoginTest {
         AuthorizationPage authPage1 = page(AuthorizationPage.class);
         authPage1.clickLogoutButton();
     }
-
 }

@@ -44,6 +44,4 @@ public class RegistrationTest {
         authPage.clickRegisterButton();
         Assert.assertTrue("Нет сообщения 'Некорректный пароль'", authPage.passwordErrorMessageIsVisible());
     }
-
-
 }

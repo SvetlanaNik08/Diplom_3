@@ -22,9 +22,9 @@ public class MainPage {
     private SelenideElement fillingsLink;
     @FindBy(how = How.XPATH, using = ".//h2[text()='Булки']")
     private SelenideElement bunsUnitName;
-    @FindBy(how = How.XPATH, using = ".//h2[text()='Булки']")
+    @FindBy(how = How.XPATH, using = ".//h2[text()='Соусы']")
     private SelenideElement saucesUnitName;
-    @FindBy(how = How.XPATH, using = ".//h2[text()='Булки']")
+    @FindBy(how = How.XPATH, using = ".//h2[text()='Начинки']")
     private SelenideElement fillingsUnitName;
     @FindBy(how = How.XPATH, using = ".//p[text()='Соус Spicy-X']")
     private SelenideElement sauceIngredient;

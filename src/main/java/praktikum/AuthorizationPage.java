@@ -9,14 +9,14 @@ import static java.time.Duration.ofSeconds;
 
 import io.qameta.allure.Step;
 
-import java.util.List;
-
 public class AuthorizationPage {
 
     @FindBy(how = How.XPATH, using = ".//a[@href='/register']")
     private SelenideElement registrationLink;
-    @FindBy(how = How.XPATH, using = ".//input[@name='name']")
-    private List<SelenideElement> nameOrEmailField;
+    @FindBy(how = How.XPATH, using = ".//fieldset[1]/div/div/input")
+    private SelenideElement nameField;
+    @FindBy(how = How.XPATH, using = ".//fieldset[2]/div/div/input")
+    private SelenideElement emailField;
     @FindBy(how = How.XPATH, using = ".//input[@name='Пароль']")
     private SelenideElement passwordField;
     @FindBy(how = How.XPATH, using = ".//button[text()='Зарегистрироваться']")
@@ -64,16 +64,16 @@ public class AuthorizationPage {
         restorePasswordLink.click();
     }
 
-    @Step("Filling first text field")
+    @Step("Filling name field")
     public void fillNameField(String nameValue) {
-        nameOrEmailField.get(0).clear();
-        nameOrEmailField.get(0).val(nameValue);
+        nameField.clear();
+        nameField.val(nameValue);
     }
 
     @Step("Filling email field")
     public void fillEmailField(String emailValue) {
-        nameOrEmailField.get(1).clear();
-        nameOrEmailField.get(1).val(emailValue);
+        emailField.clear();
+        emailField.val(emailValue);
     }
 
     @Step("Filling password field")
